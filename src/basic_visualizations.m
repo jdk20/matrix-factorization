@@ -22,7 +22,7 @@ end
 
 % basic visualizations
 c = [0.5 0.5 0.5];
-fa = 0.2;
+fa = 1.0;
 lw = 1.25;
 
 figure(1)
@@ -32,7 +32,7 @@ p = histcounts(r,5);
 p = p./sum(p);
 
 box off; hold on;
-bar(1:5, p, 1, 'EdgeColor',c,'FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
 ylim([0 1]);
 xlim([0 6]);
 set(gca, 'XTick', 1:5, 'YTick', 0:0.2:1);
@@ -57,8 +57,8 @@ p2 = histcounts(temp,5);
 p2 = p2./sum(p2);
 
 box off; hold on;
-bar(1:5, p, 1, 'EdgeColor',c,'FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
-bar(1:5, p2, 0.5, 'EdgeColor',[0 0.447 0.741],'FaceColor',[0 0.447 0.741],'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p2, 0.5, 'EdgeColor','k','FaceColor',[0 0.447 0.741],'FaceAlpha',fa,'linewidth',lw);
 ylim([0 1]);
 xlim([0 6]);
 set(gca, 'XTick', 1:5, 'YTick', 0:0.2:1);
@@ -83,8 +83,8 @@ p3 = histcounts(temp, 1:6);
 p3 = p3./sum(p3);
 
 box off; hold on;
-bar(1:5, p, 1, 'EdgeColor',c,'FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
-bar(5, p3(end), 0.5, 'EdgeColor',[0.85 0.325 0.098],'FaceColor',[0.85 0.325 0.098],'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
+bar(5, p3(end), 0.5, 'EdgeColor','k','FaceColor',[0.85 0.325 0.098],'FaceAlpha',fa,'linewidth',lw);
 ylim([0 1]);
 xlim([0 6]);
 set(gca, 'XTick', 1:5, 'YTick', 0:0.2:1);
@@ -108,8 +108,8 @@ g3 = g3./sum(g3);
 
 subplot(131)
 box off; hold on;
-bar(1:5, p, 1, 'EdgeColor',c,'FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
-bar(1:5, g1, 0.5, 'EdgeColor',[0.466 0.674 0.188],'FaceColor',[0.466 0.674 0.188],'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, g1, 0.5, 'EdgeColor','k','FaceColor',[0.466 0.674 0.188],'FaceAlpha',fa,'linewidth',lw);
 ylim([0 0.5]);
 xlim([0 6]);
 set(gca, 'XTick', 1:5, 'YTick', 0:0.1:1);
@@ -120,8 +120,8 @@ set(h1, 'box', 'off')
 
 subplot(132)
 box off; hold on;
-bar(1:5, p, 1, 'EdgeColor',c,'FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
-bar(1:5, g2, 0.5, 'EdgeColor',[0.635 0.078 0.184],'FaceColor',[0.635 0.078 0.184],'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, g2, 0.5, 'EdgeColor','k','FaceColor',[0.635 0.078 0.184],'FaceAlpha',fa,'linewidth',lw);
 ylim([0 0.5]);
 xlim([0 6]);
 set(gca, 'XTick', 1:5, 'YTick', 0:0.1:1);
@@ -131,8 +131,8 @@ set(h1, 'box', 'off')
 
 subplot(133)
 box off; hold on;
-bar(1:5, p, 1, 'EdgeColor',c,'FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
-bar(1:5, g3, 0.5, 'EdgeColor',[0.929 0.694 0.125],'FaceColor',[0.929 0.694 0.125],'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
+bar(1:5, g3, 0.5, 'EdgeColor','k','FaceColor',[0.929 0.694 0.125],'FaceAlpha',fa,'linewidth',lw);
 ylim([0 0.5]);
 xlim([0 6]);
 set(gca, 'XTick', 1:5, 'YTick', 0:0.1:1);
@@ -140,8 +140,10 @@ xlabel('Movie Rating')
 h1 = legend('All Movies','Western','Location','NorthWest');
 set(h1, 'box', 'off')
 
-% set(figure(1),'PaperPosition',[0 0 11 5.5]);
+set(figure(1),'PaperPosition',[0 0 8.5 3.0]);
 % print(figure(1),'-r600','-dtiff','Basic_1.tiff')
-% 
-% set(figure(2),'PaperPosition',[0 0 11 5.5]);
+print(figure(1),'-depsc2','Basic_1.eps')
+
+set(figure(2),'PaperPosition',[0 0 8.5 3.0]);
 % print(figure(2),'-r600','-dtiff','Basic_2.tiff')
+print(figure(2),'-depsc2','Basic_2.eps')

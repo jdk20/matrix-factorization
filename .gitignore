@@ -3,7 +3,6 @@
 *.pyc
 *.ai
 *.jpeg
-*.tif
 *.odt#
 *.mat
 *.swp
@@ -16,3 +15,4 @@
 *.npy
 *.pkl
 *.dropbox
+*.ini

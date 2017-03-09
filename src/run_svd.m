@@ -29,7 +29,7 @@ v = V_hat(:,index);
 t = titles(index);
 for i = 1:length(t)
     hold on; box off;
-    text(v(1,i), v(2,i), [' ', t{i}]); 
+    text(v(1,i), v(2,i), [' ', t{i}], 'FontSize', 8); 
     plot(v(1,i), v(2,i), 'k.');
 end
 xlabel('dimension 1');
@@ -43,7 +43,7 @@ v = V_hat(:,index);
 t = titles(index);
 for i = 1:length(t)
     hold on; box off;
-    text(v(1,i), v(2,i), [' ', t{i}]); 
+    text(v(1,i), v(2,i), [' ', t{i}], 'FontSize', 8); 
     plot(v(1,i), v(2,i), 'k.');
 end
 xlabel('dimension 1');
@@ -58,7 +58,7 @@ v = V_hat(:,index);
 t = titles(index);
 for i = 1:length(t)
     hold on; box off;
-    text(v(1,i), v(2,i), [' ', t{i}]); 
+    text(v(1,i), v(2,i), [' ', t{i}], 'FontSize', 8); 
     plot(v(1,i), v(2,i), 'k.');
 end
 xlabel('dimension 1');
@@ -84,7 +84,7 @@ for i = 1:length(t)
     end
     
     hold on; box off;
-    text(v(1,i), v(2,i), [' ', t{i}], 'Color', col); 
+    text(v(1,i), v(2,i), [' ', t{i}], 'Color', col, 'FontSize', 8); 
     plot(v(1,i), v(2,i), 'k.');
 end
 xlabel('dimension 1');
@@ -93,6 +93,7 @@ ylabel('dimension 2');
 % xlim([-1.4 0.5]);
 
 for i = 1:4
-    set(figure(i),'PaperPosition',[0 0 8.5 8.5]);
-    print(figure(i),'-r600','-dtiff',['Matrix_',num2str(i),'.tiff'])
+    set(figure(i),'PaperPosition',[0 0 5.6 5.6]);
+%     print(figure(i),'-r600','-dtiff',['Matrix_',num2str(i),'.tiff'])
+    print(figure(i),'-depsc2',['Matrix_',num2str(i),'.eps'])
 end
