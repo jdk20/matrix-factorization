@@ -106,6 +106,7 @@ g3 = ratings(logical(genres(:,19)),3);
 g3 = histcounts(g3,5);
 g3 = g3./sum(g3);
 
+return
 subplot(131)
 box off; hold on;
 bar(1:5, p, 1, 'EdgeColor','k','FaceColor',c,'FaceAlpha',fa,'linewidth',lw);
@@ -140,10 +141,10 @@ xlabel('Movie Rating')
 h1 = legend('All Movies','Western','Location','NorthWest');
 set(h1, 'box', 'off')
 
-set(figure(1),'PaperPosition',[0 0 8.5 3.0]);
-% print(figure(1),'-r600','-dtiff','Basic_1.tiff')
-print(figure(1),'-depsc2','Basic_1.eps')
-
-set(figure(2),'PaperPosition',[0 0 8.5 3.0]);
-% print(figure(2),'-r600','-dtiff','Basic_2.tiff')
-print(figure(2),'-depsc2','Basic_2.eps')
+% set(figure(1),'PaperPosition',[0 0 8.5 3.0]);
+% % print(figure(1),'-r600','-dtiff','Basic_1.tiff')
+% print(figure(1),'-depsc2','Basic_1.eps')
+% 
+% set(figure(2),'PaperPosition',[0 0 8.5 3.0]);
+% % print(figure(2),'-r600','-dtiff','Basic_2.tiff')
+% print(figure(2),'-depsc2','Basic_2.eps')
