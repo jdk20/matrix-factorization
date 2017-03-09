@@ -163,7 +163,8 @@ if __name__ == '__main__':
     eta = 1e-3,                 # learning rate
     l = 0                       # regularization lambda
     tol = 0.1                   # tolerance for convergence
-    max_epochs = 500            # maximum number of training epochs
+    max_epochs = 600            # maximum number of training epochs
+
 
     Y, U, V = train_model(k, l, eta, tol, max_epochs)
 

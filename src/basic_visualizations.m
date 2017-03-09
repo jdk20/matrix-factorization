@@ -75,6 +75,7 @@ end
 
 temp = [];
 index = index(1:10);
+
 for i = 1:length(index)
     temp = [temp; ratings(ratings(:,2) == index(i), 3)];
 end
@@ -139,8 +140,8 @@ xlabel('Movie Rating')
 h1 = legend('All Movies','Western','Location','NorthWest');
 set(h1, 'box', 'off')
 
-set(figure(1),'PaperPosition',[0 0 11 5.5]);
-print(figure(1),'-r600','-dtiff','Basic_1.tiff')
-
-set(figure(2),'PaperPosition',[0 0 11 5.5]);
-print(figure(2),'-r600','-dtiff','Basic_2.tiff')
+% set(figure(1),'PaperPosition',[0 0 11 5.5]);
+% print(figure(1),'-r600','-dtiff','Basic_1.tiff')
+% 
+% set(figure(2),'PaperPosition',[0 0 11 5.5]);
+% print(figure(2),'-r600','-dtiff','Basic_2.tiff')
